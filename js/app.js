@@ -21,8 +21,8 @@ function getInitialPage() {
 }
 
 function setActiveNav(page) {
-  document.querySelectorAll('[data-page]').forEach(a => a.classList.remove('active'));
-  document.querySelectorAll(`[data-page="${page}"]`).forEach(a => a.classList.add('active'));
+  document.querySelectorAll('[data-page]').forEach((a) => a.classList.remove('active'));
+  document.querySelectorAll(`[data-page="${page}"]`).forEach((a) => a.classList.add('active'));
 }
 
 function showSpinner(show) {
@@ -46,7 +46,6 @@ async function loadSummary() {
 }
 
 function routeTo(page) {
-  // Public function used by HTML buttons.
   const next = String(page || 'home');
   window.location.hash = `#/${next}`;
   renderRoute(next);
